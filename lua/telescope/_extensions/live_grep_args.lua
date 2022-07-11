@@ -33,6 +33,11 @@ local default_mappings = {
 }
 
 local live_grep_args = function(opts)
+  print('HEEEEERE')
+  local num = 1
+
+  if num < 10 then return end
+
   opts = vim.tbl_extend("force", setup_opts, opts or {})
   opts.mappings = vim.tbl_deep_extend("force", default_mappings, opts.mappings or {})
 
